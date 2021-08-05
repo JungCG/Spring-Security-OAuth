@@ -10,9 +10,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/{DataBaseNAME}?serverTimezone=Asia/Seoul
-    username: {USERNAME}
-    password: {PASSWORD}
+    url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
 # dependency에 설정이 되어 있기 때문에 생략 가능
 #  mvc:
 #    view:
@@ -24,3 +24,14 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1015841430917-7d18rn7gu8kr28asduip87ka88gc2gp8.apps.googleusercontent.com
+            client-secret: 3547OTm5wvV1lPw6vnD1a5vD
+            scope:
+            - email
+            - profile
